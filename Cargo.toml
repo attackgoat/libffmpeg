@@ -1,0 +1,15 @@
+[package]
+name = "libffmpeg"
+version = "0.1.0"
+authors = ["private property"]
+publish = false
+
+[dependencies]
+libc = "0.2"
+num = "0.1.40"
+
+[dependencies.ffmpeg-sys]
+default-features = false
+features = ["avformat", "swscale", "build-license-gpl", "build-license-nonfree", "build-lib-fdk-aac", "build-lib-x264", "build-nvenc", "build-pic", "build-zlib"]
+git = "https://github.com/attackgoat/rust-ffmpeg-sys"
+branch = "version/3.4"
